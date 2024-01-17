@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра-Тамогочи</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <div class="header__content">
+                    <h2>Эко Тамогочи</h2>
+                </div>
+            </div>
+        </header>
+        <section class="tam">
+            <div class="container">
+                <div class="tam__content">
+                    <h1 style="margin-bottom: 100px;">Изучаем правила экологии с помощью Тамогочи</h1>
+                    <div class="tam__mushroom">
+                        <div class="mushroom__image">
+                            <img src="{% static 'img/mushroom.png' %}" alt="" width="450px">
+                            <div class="mushroom__message">
+                                Привет, я грибочек, и мы сегодня будет узнавать много нового об экологии...
+                            </div>
+
+                        </div>
+
+                        <div class="tam__activities">
+                            <ul>
+                                <li>
+                                    <div class="activities__image"><img src="{% static 'img/plants.jpg' %}" alt="">
+                                    </div><a href="{% url 'plants' %}">Выращивать растения</a>
+                                </li>
+                                <li>
+                                    <div class="activities__image question"><img src="{% static 'img/question.svg' %}" alt=""></div>
+                                    <button id="usefulFactsButton">Полезные факты</button>
+                                </li>
+                                <li>
+                                    <div class="activities__image"><img src="{% static 'img/trash.png' %}" alt=""></div>
+                                    <a href="{% url 'trash' %}">Сортировка мусора</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Массив с рандомными фактами
+            var randomFacts = [
+                "Полезный факт: Экология помогает сохранить природные ресурсы и биоразнообразие.",
+                "Полезный факт: Важно беречь воду - это один из самых ценных ресурсов планеты.",
+                "Полезный факт: Переработка отходов помогает уменьшить количество мусора на свалках.",
+                // Добавьте здесь больше фактов по желанию
+            ];
+        
+            $("#usefulFactsButton").on("click", function() {
+                // Получаем случайный факт из массива
+                var randomFact = randomFacts[Math.floor(Math.random() * randomFacts.length)];
+        
+                // Изменяем текст в элементе .mushroom__message на случайный факт
+                $(".mushroom__message").text(randomFact);
+            });
+        });
+        
+    </script>
+</body>
+
+</html>

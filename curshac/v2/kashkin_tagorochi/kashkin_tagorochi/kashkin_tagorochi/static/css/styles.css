@@ -1,0 +1,103 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #78DBE2;
+    color: #Fff;
+    box-sizing: border-box;
+}
+
+a{
+    color: #Fff;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 150px;
+    background-color: #8B4513;
+    color: #Fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header__content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tam{
+    margin-bottom: 150px;
+}
+
+.tam__mushroom{
+    margin-top: 30px;
+}
+
+.mushroom__image{
+    position: relative;
+}
+
+.mushroom__message{
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    background-color: #fff;
+    color: #000;
+    padding: 30px 40px;
+    border-radius: 50px;
+    max-width: 250px;
+    font-size: 17px;
+}
+
+
+.tam__content{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tam__activities ul{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    
+}
+
+.tam__activities ul li{
+    background-color: #fff;
+    padding: 20px
+}
+
+.tam__activities ul li a{
+    color: #000;
+}
+
+.tam__activities ul li img{
+    width: 90px;
+    height: 90px;
+}
+
+.game{
+    position: relative;
+}
+
+.game h1{
+    position: absolute;
+    color: #fff;
+}
+
+#usefulFactsButton{
+    background-color: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
